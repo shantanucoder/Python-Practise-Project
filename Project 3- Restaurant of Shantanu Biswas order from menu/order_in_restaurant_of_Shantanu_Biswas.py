@@ -1,5 +1,4 @@
-#will be working in dictionary data type
-#Define the menu of restaurant
+# Define the menu of the restaurant
 menu = {
     'Pizza': 50,
     'Pasta': 40,
@@ -10,29 +9,33 @@ menu = {
     'Tea': 5,
 }
 
-print(menu)
-
-#greet the customer
+# Display the menu
 print("Welcome to the restaurant of Shantanu Biswas !!")
-print("Pizza: Rs.40\nPasta: Rs.40\nDhosha: Rs. 45\nIdli: Rs.35\nBurger: Rs.30\nCoffee: Rs.10\nTea: Rs.5")
+print("Here is our menu:")
+for item, price in menu.items():
+    print(f"{item}: Rs.{price}")
 
-order_total = 0
-#80 + 70 = 150
+order_total = 0  # Initialize total order cost
 
-item_1 = input("Enter the name of item you want to order = ")
+# Take the first order
+item_1 = input("Enter the name of the item you want to order: ").strip().title()
 if item_1 in menu:
-    order_total += menu[item_1]     #0 + 40 = 40
-    print(f"Your item has been added to the order")
+    order_total += menu[item_1]
+    print(f"Your item '{item_1}' has been added to the order.")
 else:
-    print(f"Please order something else from the menu. Since your ordered item {item_1} is not available  in out menu")
+    print(f"Sorry, the item '{item_1}' is not available in our menu.")
 
-another_order = input("Do you want to add another item? (YES/NO)")
-if another_order.lower() == "yes":
-    item_2 = input("Enter the name of second item: ")
+# Ask if the customer wants to order another item
+another_order = input("Do you want to add another item? (YES/NO): ").strip().lower()
+if another_order == "yes":
+    item_2 = input("Enter the name of the second item: ").strip().title()
     if item_2 in menu:
         order_total += menu[item_2]
-        print(f"Your second order {item_2} is added to the order list ")
+        print(f"Your item '{item_2}' has been added to the order.")
     else:
-        print(f"Ordered item {item_2} is not available.")
+        print(f"Sorry, the item '{item_2}' is not available in our menu.")
+elif another_order != "no":
+    print("Invalid response. Please type 'YES' or 'NO'.")
 
-print(f"The total amount of the order is = {order_total}")
+# Display the total order cost
+print(f"The total amount for your order is: Rs.{order_total}")
