@@ -23,3 +23,25 @@ A 2D arcade-style game inspired by the classic "Space Invaders," built using **P
    ```bash
    git clone https://github.com/yourusername/alien-invasion-game.git
    cd alien-invasion-game
+
+
+
+
+   alien-invasion-game/
+│
+├── alien_invasion.py          # Main game logic
+├── settings.py                # Configuration settings
+├── game_stats.py              # Game statistics tracking
+├── scoreboard.py              # Scoreboard handling
+├── button.py                  # Button creation and handling
+├── ship.py                    # Ship behavior and properties
+├── bullet.py                  # Bullet behavior and properties
+├── alien.py                   # Alien behavior and properties
+├── README.md                  # Project documentation
+
+
+
+##  Acknowledgments ✨
+This project is inspired by the "Alien Invasion Game" from the book Python Crash Course by Eric Matthes. Special thanks to the author for the concept and guidance.
+
+
